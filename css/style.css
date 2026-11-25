@@ -1,0 +1,308 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+img{
+    display: block;
+
+
+}
+address,em{
+    font-size: normal;
+}
+body{
+    background-color: #e5e5e5;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#header{}
+
+#header .logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .logo>a{}
+#header .logo>a>img{}
+#header .nav{
+    float: right;
+    margin-top: 50px;
+}
+#header .nav>ul{}
+#header .nav>ul>li{
+    float: left;
+    position: relative;
+    
+}
+#header .nav>ul>li>a{
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    /* display: block; */
+    background-color: #000;
+    display: flex; 
+    /* 이 명령어를 사용하면 블록구조로 바꿔줌 */
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+#header .nav>ul>li>a:hover{
+background-color: #777;}
+#header .nav>ul>li>.submenu{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #999;
+    width: 100%;
+    display: none;
+
+}
+#header .nav>ul>li>.submenu>a{
+    width: 100%;
+    line-height: 50px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+
+}
+#header .nav>ul>li>.submenu>a:hover{
+   background-color: #000; 
+   color: #aaa; 
+}
+
+
+
+
+#banner{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#banner> ul{
+    width: 300%;
+
+}
+#banner> ul> li{
+    float: left;
+    width: 33.3%;
+}
+#banner> ul> li> img{}
+#contents{}
+#contents> article{
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    float: left;
+}
+#contents> article >h3{
+    background-color: #000;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+}
+#contents> article> ul{
+    border-top: 1px solid #000;
+    padding-top: 10px;
+}
+#contents> .notice{}
+#contents> .notice>ul{}
+#contents> .notice>ul>li{
+    padding: 5px 0px 5px 15px;
+    position: relative;
+}
+#contents> .notice>ul>li::before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #af5a5a;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    border-radius: 50%;
+}
+/* #contents> .notice>ul>li::after{
+    content: "2";
+     */
+
+
+
+
+#contents> .notice>ul>li>a{
+    /* background-color: lightblue; */
+    display: block;
+    /* 인라인-> 블록구조로 변경 */
+    /* 말줄임표 3종셋트 */
+    white-space: nowrap;
+    /* 자리가 부족해서 아래로 떨어지는 텍스트를 한줄로 나타내주는 명령어 */
+    overflow: hidden;
+    /* 100%영역에서 넘치는 부분을 감추는 명령어 */
+    text-overflow: ellipsis;
+
+}
+#contents> .gallery{}
+#contents> .gallery>ul{}
+#contents> .gallery>ul>li{
+    width: 120px;
+    height: 130px;
+    background-color: #aaa;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#contents> .gallery>ul>li:last-child{
+    margin-right: 0;
+}
+#contents> .gallery>ul>li>span{
+    width: 100%;
+    height: 25px;
+    background-color: pink;
+    display: block;
+    justify-content: center;
+    line-height: 30px;
+    text-align: center;
+    opacity: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    transition: all 0.3s;
+   
+}
+#contents> .gallery>ul>li:hover>span{
+    bottom: 0px;
+    
+}
+#contents> .link{}
+#contents> .link>ul{}
+#contents> .link>ul>li{
+    width: 120px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+
+}
+#contents> .link>ul>li{
+    /* padding-left: 15px; */
+}
+#contents> .link>ul>li:nth-of-type(3){
+    margin: 0;
+
+}
+
+#contents> .link>ul>li:nth-of-type(1):hover > img{
+    transform: scale(1.5);
+    /* transform: rotate(45deg); */
+}
+#contents> .link>ul>li:nth-of-type(2):hover > img{
+    /* transform: rotateX(45deg); */
+    
+
+}
+#contents> .link>ul>li:nth-of-type(3):hover > img{
+    /* transform: rotateY(45deg); */
+    
+    
+}
+
+#contents> .link>ul>li>img{
+    /* 부모의 사이즈로 비율 맞춰서 사용하는 방법 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+#contents> .link>ul>li:nth-of-type(2)>span{
+    display: block;
+   width: 100%;
+   height: 100%;
+   background-color: blueviolet;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: all 0.3s;
+} 
+#contents> .link>ul>li:nth-of-type(2):hover>span{
+    transform: scale(0.1);
+}
+#contents> .link>ul>li:nth-of-type(3)>span{
+    display: block;
+   width: 100%;
+   height: 100%;
+   background-color: blueviolet;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: all 0.3s;
+}
+#contents> .link>ul>li:nth-of-type(3):hover>span{
+    transform: translateX(-100%);
+}
+
+
+
+#contents> .link>ul>li:hover>span{
+    }
+
+
+#footer{
+    background-color: #000;
+    color: #fff;
+}
+
+#footer > article{
+    width: 200px;
+    height: 100px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#footer> .f_logo{}
+#footer> .f_copy{
+    width: 800px;
+    font-style: normal;
+
+
+}
+#footer > .f_copy>address{
+    font-style: normal;
+}
+
+#footer> .f_sns{}
+#footer> .f_sns>ul{}
+#footer> .f_sns>ul>li{
+    float: left;
+    margin: 5px;
+    
+}
+

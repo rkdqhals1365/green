@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_쇼핑몰</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="쇼핑몰 로고이미지">
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">탑</a>
+                        <ul class="submenu">
+                            <li>
+                            </li><a href="#">티</a>
+                            <li>
+                            </li><a href="#">셔츠</a>
+                            <li>
+                            </li><a href="#">니트</a>
+                            <li>
+                        </ul>
+                    </li>
+                    <li><a href="#">블라우스</a>
+                        <ul class="submenu">
+                            <li></li><a href="#">티</a>
+                            <li></li><a href="#">셔츠</a>
+                            <li></li><a href="#">니트</a>                           
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="#">아우터</a>
+                        <ul class="submenu">
+                            </li><a href="#">청바지</a>
+                    <li>
+                    </li><a href="#">짧은바지</a>
+                    <li>
+                    </li><a href="#">긴바지</a>
+                    <li>
+                    </li><a href="#">레깅스</a>
+                    <li>
+                </ul>
+                </li>
+
+
+
+                <li>
+                    <a href="#">악세서리</a>
+                    <ul class="submenu">
+                </li><a href="#">청바지</a>
+                <li>
+                </li><a href="#">짧은바지</a>
+                <li>
+                </li><a href="#">긴바지</a>
+                <li>
+                </li><a href="#">레깅스</a>
+
+
+
+                </li>
+                </ul>
+                </ul>
+            </nav>
+        </header>
+        <section id="banner">
+
+
+            <ul class="clearfix">
+                <li><img src="./images/slide1.png" alt=""></li>
+                <li><img src="./images/slide2.png" alt=""></li>
+                <li><img src="./images/slide3.png" alt=""></li>
+
+            </ul>
+        </section>
+        <section id="contents" class="clearfix">
+            <article class="notice">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a href="#">10월 23일 쇼핑몰사에 개인적인 사정이 있어서 배송이 늦어질수있습니다.</a></li>
+                    <li><a href="#">11월에 여름 상품 파격세일 시작합니다.</a></li>
+                    <li><a href="#">11월 01 선착순 10명에게 50% 쿠폰 이벤트를 진행합니다.</a></li>
+                    <li><a href="#">항상 우리 쇼핑몰을 이용해주는 모든 고객님들께 20% 할인 쿠폰을 보내드립니다.</a></li>
+
+                </ul>
+            </article>
+            <article class="gallery">
+                <h3>갤러리</h3>
+                <ul class="clearfix">
+                    <li>
+                        <img src="./images/gallery1.png" alt="갤러리1">
+                        <span>착장1</span>
+
+                    </li>
+                    <li>
+                        <img src="./images/gallery2.png" alt="갤러리2">
+                        <span>착장2</span>
+
+
+                    </li>
+                    <li>
+                        <img src="./images/gallery3.png" alt="갤러리3">
+                        <span>착장3</span>
+
+
+                    </li>
+                </ul>
+            </article>
+            <article class="link">
+                <h3>바로가기</h3>
+                <ul class="clearfix">
+                    <li>
+                        <img src="./images/link_1.jpg" alt="바로가기_1">
+                        <span>바로가기_1</span>
+                    </li>
+                    <li>
+                        <img src="./images/link_2.jpg" alt="바로가기_2">
+                        <span>바로가기_2</span>
+                    </li>
+                    <li>
+                        <img src="./images/link_3.jpg" alt="바로가기_3">
+                        <span>바로가기_3</span>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+        <footer id="footer" class="clearfix">
+            <article class="f_logo">
+                <img src="./images/logo_f.png" alt="푸터로고">
+            </article>
+            <article class="f_copy">
+                <address>copyright © 2026 JUST SHOPPINGMALL ALL rights reserved.</address>
+            </article>
+            <article class="f_sns">
+                <ul>
+                    <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+                </ul>
+            </article>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(".nav > ul > li").mouseover(function () {
+            $(this).find(".submenu").stop().slideDown();
+        })
+        $(".nav > ul > li").mouseout(function () {
+            $(this).find(".submenu").stop().slideUp();
+        })
+    </script>
+</body>
+
+</html>
